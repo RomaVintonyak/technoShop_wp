@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   <meta http-equiv="x-ua-compatible" content="ie=edge" />
+   <!-- Font Awesome -->
+   <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"/>-->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+   <!--custom styles-->
+   <link rel="stylesheet" href="../css/style.min.css" />
+   <meta name="description" content="Techno Shop Магазин електроніки, яка полегшує життя" />
+   <meta name="keywords" content="смарт, стайлер, приладдя, техніка, іграшки" />
+   <meta name="google" content="notranslate" />
+   <meta name="author" content="Roman Vintonyak" />
+   <meta name="robots" content="index, follow" />
+   <!--disable format detection (iPhone / IPod / IPad) -->
+   <meta name="format-detection" content="telephone=no" />
+   <!--BlackBerry-->
+   <meta http-equiv="x-rim-auto-match" content="none" />
+   <title>TechnoShop&commat; &mdash; Доставка і оплата</title>
+</head>
+
+<body style="overflow-y: hidden;">
+   <!--preloader animation-->
+   <section id="loader" class="loader">
+      <div class="loader__wraper">
+         <div class="loader__wraper--circle">
+            <div class="circle__1"></div>
+            <div class="circle__2"></div>
+         </div>
+         <!--/.circle-->
+      </div>
+      <!--/.loader__wraper-->
+      <div class="loader__text">
+         <p>Loading...</p>
+      </div>
+      <!--/.loader__text-->
+   </section>
+   <!--/.loader-->
+   <!--progress bar block-->
+   <section id="progressBlock" class="progress__block">
+      <div class="load__line"></div>
+   </section>
+   <!--header-->
+   <header id="header" class="header">
+      <div class="container">
+         <div class="header__row">
+            <div class="header__brand">
+               <a href="../index.html">
+                  <picture>
+                     <source srcset="../img/logo/logo2.webp" type="image/webp">
+                     <img src="../img/logo/logo2.png" alt="logo" class="img">
+                  </picture>
+               </a>
+            </div>
+            <!--/.header__band-->
+            <div class="header__form">
+               <div class="header__form--search">
+                  <form>
+                     <input type="text" name="header_search" placeholder="Search here...">
+                     <button type="button" id="searchButton">
+                        <i class="fas fa-search"></i>
+                     </button>
+                  </form>
+               </div>
+               <!--/.search-->
+               <div class="header__form--chart">
+                  <a href="chart.html">
+                     <i class="fas fa-shopping-cart"></i>
+                  </a>
+                  <div class="chart__price">
+                     <p>
+                        Разом
+                     </p>
+                     <p id="priceValue">
+                        00.00
+                     </p>
+                  </div>
+               </div>
+               <!--/.chart-->
+            </div>
+            <!--/.header__form-->
+         </div>
+         <!--/.header__row-->
+      </div>
+      <!--/.container-->
+   </header>
+   <!--/.header-->
+   <!--nav panel-->
+   <nav class="nav" id="navPanel">
+      <div class="container">
+         <div class="nav__content">
+            <div class="nav__content--cat">
+               <div class="burger__btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+               </div>
+               <!--/.burger__btn-->
+               <p id="catBtn">
+                  Категорії
+               </p>
+            </div>
+            <!--/.cat-->
+            <ul class="nav__content--menu">
+               <li class="menu__item">
+                  <a class="menu__item--link" href="../index.html">Головна</a>
+               </li>
+               <li class="menu__item">
+                  <a class="menu__item--link" href="about.html">Про нас</a>
+               </li>
+               <li class="menu__item">
+                  <a class="menu__item--link" href="sales.html">Товари</a>
+               </li>
+               <li class="menu__item">
+                  <a class="menu__item--link active" href="payment.html">Доставка і оплата</a>
+               </li>
+               <li class="menu__item">
+                  <a class="menu__item--link" href="contact.html">Контакти</a>
+               </li>
+            </ul>
+            <!--/.menu-->
+         </div>
+         <!--/.nav__content-->
+      </div>
+      <!--/.container-->
+   </nav>
+   <!--/.nav-->
+   <!--dostavka main content-->
+   <!--main content-->
+   <main class="main" id="main">
+      <div class="container">
+         <div class="main__row">
+            <aside id="aside" class="aside">
+               <!--product cut-->
+               <ul class="aside__cat">
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="elektronika">
+                        Електроніка
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="tehnika_dlya_kuhni">
+                        Техніка для кухні
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="tehnika_dlya_domy">
+                        Техніка для дому
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="stolovyi_posud">
+                        Столовий посуд
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="posud_dlya_prygotuvannya">
+                        Посуд для приготування
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="posud_dlya_napoiv">
+                        Посуд для нопїв
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="chashky">
+                        Чашки
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="kuhonne_pryladduya">
+                        Кухонне приладдя
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="termo_plyashky">
+                        Термоси та пляшки
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="decor_ta_interier">
+                        Декор та інтер'єр
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="krasa_ta_zdorovya">
+                        Краса та здоров'я
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="dytyachi_tovary">
+                        Дитячі товари
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="girlyandy">
+                        Гірлянди
+                     </a>
+                  </li>
+                  <li class="aside__cat--item">
+                     <i class="far fa-play-circle"></i>
+                     <a class="asside__cat--link" href="sales.html" data-filter="turyzm">
+                        Туризм
+                     </a>
+                  </li>
+               </ul>
+               <!--/.aside__cat-->
+            </aside>
+            <!--/.aside-->
+            <section class="main__content" id="mainContent">
+               <!--intro-->
+               <div class="intro">
+                  <div class="intro__slider">
+                     <div class="slider__content" id="introSlider">
+                        <picture>
+                           <source srcset="../img/intro/slide1.webp" type="image/webp">
+                           <img src="../img/intro/slide1.JPG" alt="slide" class="img">
+                        </picture>
+                        <picture>
+                           <source srcset="../img/intro/slide2.webp" type="image/webp">
+                           <img src="../img/intro/slide2.JPG" alt="slide" class="img">
+                        </picture>
+                        <picture>
+                           <source srcset="../img/intro/slide3.webp" type="image/webp">
+                           <img src="../img/intro/slide3.JPG" alt="slide" class="img">
+                        </picture>
+                        <picture>
+                           <source srcset="../img/intro/slide4.webp" type="image/webp">
+                           <img src="../img/intro/slide4.JPG" alt="slide" class="img">
+                        </picture>
+                        <picture>
+                           <source srcset="../img/intro/slide5.webp" type="image/webp">
+                           <img src="../img/intro/slide5.JPG" alt="slide" class="img">
+                        </picture>
+                        <picture>
+                           <source srcset="../img/intro/slide6.webp" type="image/webp">
+                           <img src="../img/intro/slide6.JPG" alt="slide" class="img">
+                        </picture>
+                        <picture>
+                           <source srcset="../img/intro/slide7.webp" type="image/webp">
+                           <img src="../img/intro/slide7.JPG" alt="slide" class="img">
+                        </picture>
+                        <picture>
+                           <source srcset="../img/intro/slide8.webp" type="image/webp">
+                           <img src="../img/intro/slide8.JPG" alt="slide" class="img">
+                        </picture>
+                     </div>
+                     <!--/.slider__content-->
+                  </div>
+                  <!--/.intro__slider-->
+                  <div class="intro__content">
+                     <h1><span>Techno</span>Shop</h1>
+                     <h2>Техніка яка полегшує життя</h2>
+                     <a href="sales.html">Купити зараз</a>
+                     <div class="intro__content--baner">
+                        <div class="baner__coll">
+                           <h3>Безплатна доставка товару</h3>
+                           <p>безкоштовна доставка призамовленні від 2500 &#8372;</p>
+                        </div>
+                        <!--baner__coll-->
+                        <div class="baner__coll">
+                           <h3>Обмін та повернення</h3>
+                           <p>обмін та повернення товару, гарантія якості</p>
+                        </div>
+                        <!--/.baner__coll-->
+                        <div class="baner__coll">
+                           <h3>Спеціальні пропозиції</h3>
+                           <p>сезонні акції та знижки, промо акції</p>
+                        </div>
+                        <!--/.baner__coll-->
+                     </div>
+                     <!--/.baner-->
+                  </div>
+                  <!--/.intro__content-->
+               </div>
+               <!--/.intro-->
+            </section>
+            <!--/.main__content-->
+         </div>
+         <!--/.main__row-->
+         <!--dostavka block-->
+         <section class="dostavka&oplata">
+               <!--title-->
+               <section class="dostavka__title">
+                  <div class="dostavka__title--title">
+                     <h1>
+                        Доставка і оплата
+                     </h1>
+                  </div>
+                  <!--/.title-->
+               </section>
+               <!--/.dostavka__title-->
+               <!--post-->
+               <section class="dostavka__post">
+                  <div class="dostavka__post--title">
+                     <h3>
+                        Доставку замовлень здійснюємо компанією
+                        <span>нова пошта</span> на ваш вибір, або наявність відділень відповідної служби
+                        у вашому населеному пункті.
+                     </h3>
+                  </div>
+                  <!--/.title-->
+                  <div class="dostavka__post--img">
+                     <picture>
+                        <source srcset="../img/dostavka/post.webp" type="image/webp">
+                        <img src="../img/dostavka/post.png" alt="logo poshta" class="img">
+                     </picture>
+                  </div>
+                  <!--/.img-->
+               </section>
+               <!--/.dostavka__post-->
+               <!--title post-->
+               <section class="title__post">
+                  <div class="title__post--row">
+                     <span>
+                        <i class="fas fa-exclamation"></i>
+                     </span>
+                     <p>
+                        Можливий самовивіз замовлень зі складу в Івано &mdash; Франківській області
+                     </p>
+                  </div>
+                  <!--/.row-->
+               </section>
+               <!--/.title__post-->
+               <!--image post-->
+               <section class="image__post">
+                  <div class="image__post--row">
+                     <div class="row__text">
+                        <div class="row__text--title">
+                           <h3>
+                              Вартість доставки
+                           </h3>
+                        </div>
+                        <!--/.title-->
+                        <div class="row__text--text">
+                           <p>
+                              Вартість доставки залежить від габаритів та ваги замовлення та встановлюється
+                              службою доставки. За умови вибору способу оплати “наложений платіж”
+                              вартість послуги з пересилання грошових коштів назад продавцю оплачує покупець.
+                           </p>
+                        </div>
+                        <!--/.text-->
+                     </div>
+                     <!--/.row__text-->
+                     <div class="row__img">
+                        <span>
+                           <i class="fas fa-box-open"></i>
+                        </span>
+                     </div>
+                     <!--/.row__img-->
+                  </div>
+                  <!--/.row-->
+               </section>
+               <!--/.image__post-->
+               <!--title post-->
+               <section class="title__post">
+                  <div class="title__post--row">
+                     <span>
+                        <i class="fas fa-exclamation"></i>
+                     </span>
+                     <p>
+                        Оцінювання посилки відбувається на повну вартість замовлення при наложеному платежі.
+                     </p>
+                  </div>
+                  <!--/.row-->
+               </section>
+               <!--/.title__post-->
+               <!--image post-->
+               <section class="image__post">
+                  <div class="image__post--row">
+                     <div class="row__text">
+                        <div class="row__text--title">
+                           <h3>
+                              Оцінка товару
+                           </h3>
+                        </div>
+                        <!--/.title-->
+                        <div class="row__text--text">
+                           <p>
+                              За бажанням клієнта і за умови 100% передоплати можливе оцінювання
+                              посилки на мінімальну або меншу суму від вартості замовлення.
+                              У такому випадку відповідальність за товар та його цілісність несе покупець.
+                           </p>
+                        </div>
+                        <!--/.text-->
+                     </div>
+                     <!--/.row__text-->
+                     <div class="row__img">
+                        <span>
+                           <i class="far fa-money-bill-alt"></i>
+                        </span>
+                     </div>
+                     <!--/.row__img-->
+                  </div>
+                  <!--/.row-->
+               </section>
+               <!--/.image__post-->
+               <!--title post-->
+               <section class="title__post">
+                  <div class="title__post--row">
+                     <span>
+                        <i class="fas fa-exclamation"></i>
+                     </span>
+                     <p>
+                        Форми оплата: накладний платіж та передплата
+                     </p>
+                  </div>
+                  <!--/.row-->
+               </section>
+               <!--/.title__post-->
+               <!--pay post-->
+               <section class="pay__post">
+                  <div class="pay__post--row">
+                     <div class="pay__post--title">
+                        <h3>
+                           Способи оплати
+                        </h3>
+                     </div>
+                     <!--/.title-->
+                     <div class="pay__post--block">
+                        <div class="block__item">
+                           <span>
+                              <i class="fab fa-cc-visa"></i>
+                           </span>
+                           <p>
+                              На карту
+                           </p>
+                        </div>
+                        <!--/.block__item-->
+                        <div class="block__item">
+                           <span>
+                              <i class="fas fa-box"></i>
+                           </span>
+                           <p>
+                              Післяплатою
+                           </p>
+                        </div>
+                        <!--/.block__item-->
+                        <div class="block__item">
+                           <span>
+                              <i class="fas fa-money-bill-wave"></i>
+                           </span>
+                           <p>
+                              Готівка
+                           </p>
+                        </div>
+                        <!--/.block__item-->
+                        <div class="block__item">
+                           <span>
+                              <i class="fab fa-bitcoin"></i>
+                           </span>
+                           <p>
+                              Криптою
+                           </p>
+                        </div>
+                        <!--/.block__item-->
+                        <div class="block__item">
+                           <span>
+                              <i class="fas fa-wallet"></i>
+                           </span>
+                           <p>
+                              На рахунок
+                           </p>
+                        </div>
+                        <!--/.block__item-->
+                     </div>
+                     <!--/.block-->
+                  </div>
+                  <!--/.row-->
+               </section>
+               <!--/.pay__post-->
+         </section><!--/.dostavka&oplata-->
+      </div>
+      <!--/.container-->
+      <!--baner logo row-->
+      <section class="baner mt-6">
+         <div class="container">
+            <div class="baner__row">
+               <div class="baner__row--item">
+                  <picture>
+                     <source srcset="../img/baner/gemei.webp" type="image/webp">
+                     <img src="../img/baner/gemei.png alt=" logo" class="img">
+                  </picture>
+               </div>
+               <!--/.item-->
+               <div class="baner__row--item">
+                  <picture>
+                     <source srcset="../img/baner/sokany.webp" type="image/webp">
+                     <img src="../img/baner/sokany.png" alt="logo" class="img">
+                  </picture>
+               </div>
+               <!--/.item-->
+               <div class="baner__row--item">
+                  <picture>
+                     <source srcset="../img/baner/vgr.webp" type="image/webp">
+                     <img src="../img/baner/vgr.png" alt="logo" class="img">
+                  </picture>
+               </div>
+               <!--/.item-->
+               <div class="baner__row--item">
+                  <picture>
+                     <source srcset="../img/baner/xiaomi.webp" type="image/webp">
+                     <img src="../img/baner/xiaomi.png" alt="logo" class="img">
+                  </picture>
+               </div>
+               <!--/.item-->
+               <div class="baner__row--item">
+                  <picture>
+                     <source srcset="../img/baner/smartx.webp" type="image/webp">
+                     <img src="../img/baner/smartx.png" alt="logo" class="img">
+                  </picture>
+               </div>
+               <!--/.item-->
+            </div>
+            <!--/.baner__row-->
+         </div>
+         <!--/.container-->
+      </section>
+      <!--/.baner-->
+   </main>
+   <!--/.main-->
+   <!--footer-->
+   <footer class="footer" id="footer">
+      <div class="container">
+         <div class="footer__row">
+            <div class="footer__description">
+               <div class="footer__description--logo">
+                  <a href="../index.html">
+                     <picture>
+                        <source srcset="../img/logo/logo.webp" type="image/webp">
+                        <img src="../img/logo/logo.png" alt="logo" class="img">
+                     </picture>
+                  </a>
+               </div>
+               <!--/.logo-->
+               <p>
+                  Магазин побутової техніки, та електроніки.
+                  Кухонне приладдя, товари для найменших.
+               </p>
+               <div class="footer__description--adress">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <span>
+                     Івано - Франківська обл. м. Бурштин
+                  </span>
+               </div>
+               <!--/.adress-->
+               <div class="footer__description--phone">
+                  <i class="fas fa-phone-alt"></i>
+                  <a href="tel:+380972349231">+380972349231</a>
+               </div>
+               <!--/.phone-->
+               <div class="footer__description--mail">
+                  <i class="fas fa-envelope"></i>
+                  <a href="mailto:techno@if.ua">techno@if.ua</a>
+               </div>
+               <!--/.mail-->
+            </div>
+            <!--/.footer__description-->
+            <div class="footer__menu">
+               <h3>
+                  Інформація
+               </h3>
+               <ul>
+                  <li>
+                     <a href="about.html">Про нас</a>
+                  </li>
+                  <li>
+                     <a href="oferta.html">Договір публічної оферти</a>
+                  </li>
+                  <li>
+                     <a href="obmin.html">Обмін та повернення</a>
+                  </li>
+                  <li>
+                     <a href="payment.html">Доставка і оплата</a>
+                  </li>
+               </ul>
+            </div>
+            <!--/.footer__menu-->
+            <div class="footer__social">
+               <h3>
+                  Ми у соц мережах
+               </h3>
+               <ul>
+                  <li>
+                     <a href="https://facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                        <span>Facebook</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://www.instagram.com/techno_shop_if?igsh=MWowcWJvcHhtYWM4NQ==" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="https://www.tiktok.com/@techno_shop_if?_t=8kCd2zV48Zx" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                        <span>Tiktok</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+            <!--/.footer__social-->
+            <div class="footer__time">
+               <h3>
+                  Графік роботи
+               </h3>
+               <div class="footer__time--grafik">
+                  <i class="far fa-clock"></i>
+                  <div>
+                     <p>Пн- Пт 9:00 - 18:00</p>
+                     <p>Сб 10:00 - 16:00</p>
+                  </div>
+               </div>
+               <!--/.grafik-->
+               <div class="footer__time--payment">
+                  <div>
+                     <img src="../img/payment/ua-mcard.svg" alt="logo" class="img">
+                  </div>
+                  <div>
+                     <img src="../img/payment/ua-visa.svg" alt="logo" class="img">
+                  </div>
+                  <div>
+                     <img src="../img/payment/ua-privat.svg" alt="logo" class="img">
+                  </div>
+               </div>
+               <!--/.payment-->
+            </div>
+            <!--/.footer__time-->
+         </div>
+         <!--/.footer__row-->
+      </div>
+      <!--/.container-->
+   </footer>
+   <!--/.footer-->
+   <!--footer copyright-->
+   <footer class="footer__copyright">
+      <div class="container">
+         <div class="footer__copyright--row">
+            Всі права захищено &copy;2023 &mdash;
+            <script>document.write(new Date().getFullYear());</script>
+         </div>
+         <!--/.row-->
+      </div>
+      <!--/.container-->
+   </footer>
+   <!--/.footer__copyright-->
+   <!--back top button-->
+   <div class="back__top">
+      <div class="back__top--content">
+         <i class="fas fa-arrow-up"></i>
+      </div>
+      <!--/.content-->
+   </div>
+   <!--/.back__top-->
+   <!--libs js conected-->
+   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+   <script>window.jQuery || document.write('<script src="../js/vendor/jquery-3.4.1.min.js"><\/script>');</script>
+   <!--slick slider https://kenwheeler.github.io/slick/ -->
+   <script src="../js/vendor/slick.min.js"></script>
+   <!-- main script -->
+   <script src="../js/main.js"></script>
+   <!-- mail script -->
+   <script src="../js/mail.js"></script>
+</body>
+
+</html>
