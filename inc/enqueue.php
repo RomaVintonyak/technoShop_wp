@@ -9,7 +9,6 @@ add_action( 'wp_enqueue_scripts', 'wps_deregister_styles', 100 );
 function scriptStyle(){
    wp_enqueue_style( 'kwooeshop-fontawesome', 'https://use.fontawesome.com/releases/v5.15.4/css/all.css' );
    wp_enqueue_style( 'main_style', get_template_directory_uri() . '/assets/css/style.min.css');
-   
    wp_deregister_script( 'jquery' );
    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/js/vendor/jquery-3.4.1.min.js', null, 3, true);
    wp_enqueue_script('lightbox', get_template_directory_uri() . '/assets/js/vendor/lightbox.min.js', null, 2, true);
